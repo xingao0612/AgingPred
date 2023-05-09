@@ -5,7 +5,7 @@ This is an R package developed based on Shiny app, which allows users to upload 
 How to install:
 ```R
 library(devtools)
-install_github("xingao0612/AgingPred.test")
+install_github("xingao0612/AgingPred")
 ```
 usage:<br>
 ```R

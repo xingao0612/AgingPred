@@ -1,0 +1,22 @@
+Package: AgingPred
+Type: Shiny
+Title: A Shiny App For Aging Prediction
+Version: 0.1.1
+Author: Xin Gao
+Maintainer: Xin Gao <gaoxin_0612@163.com>
+Description: A Shiny App For Aging Prediction.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends:
+    shiny,
+    shinydashboard,
+    ggplot2,
+    ggpubr,
+    shinycssloaders,
+    randomForest,
+    sva,
+    dplyr
+
+
+ 

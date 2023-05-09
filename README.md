@@ -9,5 +9,6 @@ install_github("xingao0612/AgingPred")
 ```
 usage:<br>
 ```R
+library(AgingPred)
 AgingPred()
 ```

@@ -7,11 +7,20 @@ Note: Before installing this App, you will need to install some dependent R pack
 ```R
 if (!require("BiocManager"))
   install.packages("BiocManager")
+if (!require("devtools"))
+  install.packages("devtools")
 library(BiocManager)
 if (!require("limma"))
   BiocManager::install("sva")
-if (!require("devtools"))
-  install.packages("devtools")
+  
+  install.packages("shiny")
+  install.packages("shinydashboard")
+  install.packages("ggplot2")
+  install.packages("ggpubr")
+  install.packages("shinycssloaders")
+  install.packages("randomForest")
+  install.packages("dplyr")
+
 ```
 How to install AgingPred:
 ```R
@@ -31,3 +40,7 @@ Start interface
 
 Result interface
 ![](https://github.com/xingao0612/AgingPred/blob/master/inst/www/interface2.jpg)  
+
+## Contact us
+E-mail: gaoxin_0612@163.com
+

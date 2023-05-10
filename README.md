@@ -16,4 +16,7 @@ AgingPred usage:<br>
 library(AgingPred)
 AgingPred()
 ```
-![](https://github.com/xingao0612/AgingPred/blob/master/interface.jpg)  
+Start interface
+![](https://github.com/xingao0612/AgingPred/blob/master/inst/www/interface.jpg)  
+Result interface
+![](https://github.com/xingao0612/AgingPred/blob/master/inst/www/interface2.jpg)  

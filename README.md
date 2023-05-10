@@ -5,7 +5,7 @@ This is an R package developed using Shiny that allows users to upload human per
 
 ## Installation
 Note: Before installing this App, you will need to install some dependent R packages on your R.<br>
-Bioconductor:
+From Bioconductor:
 ```R
 if (!require("BiocManager"))
   install.packages("BiocManager")
@@ -17,7 +17,7 @@ if (!require("limma"))
 if (!require("sva"))
   install.packages("sva")
   ```
-  CRAN (Comprehensive R Archive Network): 
+  From CRAN (Comprehensive R Archive Network): 
   ```R
   install.packages("shiny")
   install.packages("shinydashboard")

@@ -4,7 +4,8 @@
 This is an R package developed using Shiny that allows users to upload human peripheral blood RNA-seq data and predict the age and aging rate of the uploaded samples using our pre-built random forest age prediction model.<br>
 
 ## Installation
-Note: Before installing this App, you will need to install some dependent R packages on your R.
+Note: Before installing this App, you will need to install some dependent R packages on your R.<br>
+Bioconductor:
 ```R
 if (!require("BiocManager"))
   install.packages("BiocManager")
@@ -15,7 +16,9 @@ if (!require("limma"))
   install.packages("limma")
 if (!require("sva"))
   install.packages("sva")
-  
+  ```
+  CRAN (Comprehensive R Archive Network): 
+  ```R
   install.packages("shiny")
   install.packages("shinydashboard")
   install.packages("ggplot2")

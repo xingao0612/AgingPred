@@ -16,7 +16,8 @@ Depends:
     shinycssloaders,
     randomForest,
     sva,
-    dplyr
+    dplyr,
+    limma
 
 
  

@@ -18,14 +18,12 @@ How to install AgingPred:
 devtools::install_github("xingao0612/AgingPred")
 ```
 
-AgingPred usage:<br>
+## AgingPred usage:<br>
 ```R
 library(AgingPred)
 AgingPred()
 ```
-<br>
 Start interface
 ![](https://github.com/xingao0612/AgingPred/blob/master/inst/www/interface.jpg)  
-<br>
 Result interface
 ![](https://github.com/xingao0612/AgingPred/blob/master/inst/www/interface2.jpg)  

@@ -7,11 +7,11 @@ How to install:
 library(devtools)
 install_github("xingao0612/AgingPred")
 ```
-注意：在安装“AgingPred”之前，请确认您已经安装了"sva"包，如没有安装，请先使用以下代码安装"sva"包： 
+Note: before installing "AgingPred", please make sure that you have installed the "sva" package. If not, install the "sva" package with the following code:
 ```R
 BiocManager::install("sva")
 ```
-usage:<br>
+AgingPred usage:<br>
 ```R
 library(AgingPred)
 AgingPred()

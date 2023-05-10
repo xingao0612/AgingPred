@@ -1,5 +1,5 @@
 # AgingPred
-![](https://img.shields.io/badge/source%20code-support-blue) ![](https://img.shields.io/badge/R-package-green) <br>
+![](https://img.shields.io/badge/source%20code-support-blue) ![](https://img.shields.io/badge/R-package-green) ![](https://img.shields.io/badge/Version-0.1.1-yellowgreen)<br>
 ## Introduction
 This is an R package developed using Shiny that allows users to upload human peripheral blood RNA-seq data and predict the age and aging rate of the uploaded samples using our pre-built random forest age prediction model.<br>
 

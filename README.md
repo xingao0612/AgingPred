@@ -1,4 +1,4 @@
-# AgingPred package
+# AgingPred
 ![](https://img.shields.io/badge/source%20code-support-blue) ![](https://img.shields.io/badge/R-package-green) <br>
 This is an R package developed based on Shiny app, which allows users to upload peripheral blood leukocyte expression profile data. It uses a pre-built random forest age prediction model to predict the age of the samples and identify the aging rate.<br><br>
 

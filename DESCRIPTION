@@ -8,6 +8,8 @@ Description: A Shiny App For Aging Prediction.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Collate:
+    R/zzz.R
 Depends:
     shiny,
     shinydashboard,

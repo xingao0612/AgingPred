@@ -48,21 +48,44 @@ AgingPred <- function(text_size = 20) {
 
       fluidRow(
         box(status = "success",
-
-            h3(tagList(shiny::icon("question-circle"),strong("About this software"))),
-            h5("Welcome to",strong("AgingPred!"),"AgingPred includes random forest prediction models for age and aging rate, which can be used for age and aging rate analysis in both healthy individuals and disease populations, particularly patients with infectious diseases. (Due to potential biases in model training, the predicted results are for scientific research reference only and are not yet suitable for clinical applications.)",br(),br(),
-               strong("Affiliation: "), "Peking Union Medical College, Chinese Academy of Medical Sciences; The Key Laboratory of Geriatrics, Beijing Institute of Geriatrics, National Health Commission, Beijing Hospital.(中国医学科学院&北京协和医学院；北京医院，国家卫生健康委员会北京老年医学研究所老年医学重点实验室)",br(),
-               strong("Author: "),"Xin Gao (高鑫), E-mail: ",span("gaoxin_0612@163.com", style = "color:blue"),br(),
-               "Please cite XXXXX articles after using this software.",br(),br(),
-               strong("Upload data description:"),
-               "The uploaded expression profile must include the genes CD248, PHGDH, HYKPL, BPGM, SFXN2, TWF1, MXRA8, NOG, TTC24, and CACHD1, which are part of the random forest prediction model.",br(),
-               "It is recommended to use RNA-seq data from human peripheral blood leukocytes. The required example data can be downloaded from the link below. If the sample information file does not contain any grouping information, please fill the “status” column with “none”.",
-               style="text-align:left;color:black;background-color:lavender;padding:15px;border-radius:10px"),
-
+            h3(tagList(shiny::icon("question-circle"), strong("About this software"))),
+            h5(
+              "Welcome to", strong("AgingPred!"), "AgingPred includes random forest prediction models for age and aging rate, which can be used for age and aging rate analysis in both healthy individuals and disease populations, particularly patients with infectious diseases. (Due to potential biases in model training, the predicted results are for scientific research reference only and are not yet suitable for clinical applications.)", br(), br(),
+              strong("Affiliation: "), "Peking Union Medical College, Chinese Academy of Medical Sciences; The Key Laboratory of Geriatrics, Beijing Institute of Geriatrics, National Health Commission, Beijing Hospital. (中国医学科学院&北京协和医学院；北京医院，国家卫生健康委员会北京老年医学研究所老年医学重点实验室)", br(),
+              strong("Author: "), "Xin Gao (高鑫), E-mail: ", span("gaoxin_0612@163.com", style = "color:blue"), br(),
+              "Please cite XXXXX articles after using this software.", br(), br(),
+              strong("Upload data description:"),
+              "The uploaded expression profile must include the genes ",
+              tags$a(href = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CD248", "CD248"),
+              ", ",
+              tags$a(href = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PHYKPL", "PHGDH"),
+              ", ",
+              tags$a(href = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=PHYKPL", "PHYKPL"),
+              ", ",
+              tags$a(href = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=BPGM", "BPGM"),
+              ", ",
+              tags$a(href = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=SFXN2", "SFXN2"),
+              ", ",
+              tags$a(href = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=TWF1", "TWF1"),
+              ", ",
+              tags$a(href = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=MXRA8", "MXRA8"),
+              ", ",
+              tags$a(href = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=NOG", "NOG"),
+              ", ",
+              tags$a(href = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=TTC24", "TTC24"),
+              ", and ",
+              tags$a(href = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=CACHD1", "CACHD1"),
+              ", which are part of the random forest prediction model. Please click on the gene name to view the gene aliases!",
+              br(),
+              "It is recommended to use RNA-seq data from human peripheral blood leukocytes. The required example data can be downloaded from the link below. If the sample information file does not contain any grouping information, please fill the 'status' column with 'none'.",
+              style = "text-align:left;color:black;background-color:lavender;padding:15px;border-radius:10px"
+            ),
             actionButton("openButton" , label = HTML(paste0(icon("cloud-download"), "Example Expression Profile File"))),
             actionButton("openButton2" , label = HTML(paste0(icon("cloud-download"), "Example Sample Information File"))),
             width = 12
-        ))
+        )
+      )
+
 
 
     )
@@ -116,8 +139,8 @@ AgingPred <- function(text_size = 20) {
     observeEvent(input$calculate_button, {
       if (!check_target_genes(rt())) {
         showModal(modalDialog(
-          title = "错误",
-          "表达谱中缺少目标基因（CD248，PHGDH，HYKPL，BPGM，SFXN2，TWF1，MXRA8，NOG，TTC24，CACHD1）！请检查上传的表达谱文件。",
+          title = "Error",
+          "The target genes (CD248, PHGDH, HYKPL, BPGM, SFXN2, TWF1, MXRA8, NOG, TTC24, CACHD1) are missing in the expression profile! Please check the uploaded expression profile file.",
           easyClose = TRUE
         ))
       } else {

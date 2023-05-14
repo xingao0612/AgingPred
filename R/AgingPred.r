@@ -237,7 +237,7 @@ AgingPred <- function(text_size = 20) {
           xlab("Actual age (years)")+ylab("Predicted age (years)")+
           geom_point(aes(color = status), alpha=0.8)+ geom_smooth(method="lm",formula = y ~ x, color="#333333", fill = "#cbc9e2") + theme_test()+
           stat_cor(method = 'spearman', aes(x =age, y =predict_test), show.legend = FALSE)+geom_text(data = df3,
-                                                                                                     aes(label = sprintf("R = %.2f\nP = %.2f",
+                                                                                                     aes(label = sprintf("R = %.2f\nP = %.3f",
                                                                                                                          cor(age, predict_test, method = "spearman"),
                                                                                                                          cor.test(age, predict_test, method = "spearman")$p.value)),
                                                                                                      x = max(df3$age), y = max(df3$predict_test), hjust = 1, vjust = 1, color = "#666666")

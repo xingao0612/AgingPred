@@ -240,8 +240,7 @@ AgingPred <- function(text_size = 20) {
                                                                                                      aes(label = sprintf("R = %.2f\nP = %.3f",
                                                                                                                          cor(age, predict_test, method = "spearman"),
                                                                                                                          cor.test(age, predict_test, method = "spearman")$p.value)),
-                                                                                                     x = max(df3$age), y = max(df3$predict_test), hjust = 1, vjust = 1, color = "#666666")
-        +
+                                                                                                     x = max(df3$age), y = max(df3$predict_test), hjust = 1, vjust = 1, color = "#666666")+
           scale_color_manual(values = c("#66C2A5", "#FC8D62", "#8DA0CB", "#E78AC3", "#A6D854", "#FFD92F", "#E5C494", "#B3B3B3"))
 
 

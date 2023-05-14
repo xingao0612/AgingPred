@@ -42,10 +42,10 @@ AgingPred()
 
 Start interface
 
-![](https://github.com/xingao0612/AgingPred/blob/master/inst/www/interface.jpg)
+![](https://github.com/xingao0612/AgingPred/blob/master/inst/www/interface.png)
 
 Result interface
-![](https://github.com/xingao0612/AgingPred/blob/master/inst/www/interface2.jpg)  
+![](https://github.com/xingao0612/AgingPred/blob/master/inst/www/interface2.png)  
 
 ## Contact us
 E-mail: gaoxin_0612@163.com

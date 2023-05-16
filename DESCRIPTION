@@ -1,7 +1,7 @@
 Package: AgingPred
 Type: Shiny
 Title: A Shiny App For Aging Prediction
-Version: 0.1.1
+Version: 0.1.2
 Date: 2023-06-06
 Author: Xin Gao
 Maintainer: Xin Gao <gaoxin_0612@163.com>

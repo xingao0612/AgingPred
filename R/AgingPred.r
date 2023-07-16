@@ -310,7 +310,7 @@ plot_data$Type <- factor(plot_data$Type, levels = legend_labels)
         # 绘制百分比堆积图
         p2 <-ggplot(plot_data, aes(x = status, y = Percent, fill = Type )) +
           geom_col(position = "fill")+
-          scale_fill_manual(values = c("#8DA0CB", "#FC8D62", "#66C2A5"))+xlab("")+
+          scale_fill_manual(values = c("#FC8D62", "#8DA0CB", "#66C2A5"))+xlab("")+
           geom_text(aes(label = scales::percent(Percent)), position = position_fill(vjust = 0.5)) +  # 添加百分比数值
           theme_test()
         

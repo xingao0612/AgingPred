@@ -45,7 +45,7 @@ Start interface
 ![](https://github.com/xingao0612/AgingPred/blob/master/inst/www/interface11.png)
 
 Result interface
-![](https://github.com/xingao0612/AgingPred/blob/master/inst/www/results inter.jpg)  
+![](https://github.com/xingao0612/AgingPred/blob/master/inst/www/results.jpg)  
 
 ## Contact us
 E-mail: gaoxin_0612@163.com

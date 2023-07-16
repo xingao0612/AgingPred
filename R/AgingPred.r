@@ -281,7 +281,7 @@ AgingPred <- function(text_size = 20) {
         
         ngdc$Aging_group <- case_when(ngdc$curated_delta_age > q3 ~ "quick-aging",
                                       ngdc$curated_delta_age < q1 ~ "slow-aging",
-                                      ngdc$curated_delta_age <= q3 | ngdc$curated_delta_age >=q3 ~ "average-aging")
+                                      ngdc$curated_delta_age <= q3 | ngdc$curated_delta_age >=q1 ~ "average-aging")
         
         
         #####绘制堆积图
@@ -302,7 +302,11 @@ AgingPred <- function(text_size = 20) {
           group_by(status) %>%
           mutate(Percent = Freq / sum(Freq))
         
-        
+        # 创建自定义顺序的图例标签
+legend_labels <- c("quick-aging", "average-aging", "slow-aging")
+
+# 将Type变量转换为有序因子
+plot_data$Type <- factor(plot_data$Type, levels = legend_labels)
         # 绘制百分比堆积图
         p2 <-ggplot(plot_data, aes(x = status, y = Percent, fill = Type )) +
           geom_col(position = "fill")+
